@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome to CS Exam Game</title>
+  <style>
+    body {
+      background-color: #f4f4f4;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 {
+      color: #333;
+    }
+    nav {
+      margin: 20px auto;
+    }
+    nav a {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      text-decoration: none;
+      background-color: #333;
+      color: #fff;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+    nav a:hover {
+      background-color: #555;
+    }
+    /* Optional: style for the user info element */
+    #user-info {
+      margin-top: 20px;
+      font-size: 20px;
+      color: #0078d4; /* A blue color for example */
+    }
+  </style>
+  <!-- Import map to resolve '@azure/msal-browser' using esm.sh -->
+  <script type="importmap">
+  {
+    "imports": {
+      "@azure/msal-browser": "https://esm.sh/@azure/msal-browser@2.34.0"
+    }
+  }
+  </script>
+</head>
+<body>
+  <h1>Welcome to CS Exam Game</h1>
+  <button id="ms-login-btn">Sign in with Microsoft</button>
+  <!-- Element for displaying logged in user info -->
+  <div id="user-info"></div>
+  <nav>
+    <a href="leaderboard.html">Leaderboard</a>
+    <a href="space-invaders.html">Space Invaders</a>
+    <a href="frogger.html">Frogger</a>
+  </nav>
+  <script type="module">
+    import { login } from './auth.js';
+    // Attach the login function to the button
+    document.getElementById("ms-login-btn").addEventListener("click", login);
+  </script>
+</body>
+</html>
