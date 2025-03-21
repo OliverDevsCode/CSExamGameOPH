@@ -6,7 +6,7 @@ const msalConfig = {
     auth: {
         clientId: "8794ae66-81d9-4b1d-8dd5-b146c546dea2", // Your Application (client) ID from Entra ID
         authority: "https://login.microsoftonline.com/737b9d9f-9b7b-4dd2-b7d3-aef85aef5565", // Tenant-specific endpoint
-        redirectUri: "https://cs-exam-game-v5.vercel.app" // Must match your registered redirect URI
+        redirectUri: "https://cs-exam-game-oph.vercel.app" // Must match your registered redirect URI
     },
     cache: {
         cacheLocation: "sessionStorage", // Options: "sessionStorage" or "localStorage"

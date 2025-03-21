@@ -1,5 +1,5 @@
 // When hosted on Vercel, the API endpoints are available under /api
-const API_BASE = 'https://cs-exam-game-v3.vercel.app';
+const API_BASE = 'https://cs-exam-game-oph.vercel.app';
 
 document.addEventListener('DOMContentLoaded', function() {
   const scoreboardList = document.getElementById('scoreboard');
